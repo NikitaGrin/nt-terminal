@@ -3,7 +3,7 @@ import Header from "./Header";
 import styled from "styled-components";
 
 const StyledAppLayout = styled.div`
-  height: 100vh;
+  height: 100vdh;
   background-image: linear-gradient(
     150deg,
     var(--color-grey-0) 30%,
@@ -13,7 +13,7 @@ const StyledAppLayout = styled.div`
 
 const Main = styled.main`
   padding: 3rem;
-  height: 92%;
+  height: 100dvh;
   max-width: 120rem;
   margin: auto;
 `;

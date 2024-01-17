@@ -69,6 +69,26 @@ body {
   color: var(--color-grey-900);
   font-weight: 400;
 }
-`;
 
+button {
+  transition: 0.3s all;
+  padding: 0.5rem 1rem;
+  border-radius: var(--border-radius-sm);
+  border: none;
+  background-color: var(--color-grey-0);
+  border: 1px solid var(--color-brand-50);
+  color: var(--color-grey-500);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-0.1rem);
+  }
+
+  &:active {
+    transform: translateY(0rem);
+  }
+}
+`;
 export default GlobalStyles;

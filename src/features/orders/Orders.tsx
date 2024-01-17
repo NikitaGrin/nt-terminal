@@ -1,16 +1,14 @@
 import styled from "styled-components";
 import Card from "../../ui/Card";
-
-const StyledOrders = styled.div`
-  grid-column: 2;
-  grid-row: 1 /3;
-`;
+import Heading from "../../ui/Heading";
+import OrdersTable from "./OrdersTable";
 
 function Orders() {
   return (
-    <StyledOrders>
-      <Card>orders</Card>
-    </StyledOrders>
+    <Card spacing={"true"} tempFix1={"true"}>
+      <Heading as="h2">Заявки</Heading>
+      <OrdersTable />
+    </Card>
   );
 }
 
