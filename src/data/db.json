@@ -1,0 +1,46 @@
+{
+  "orders": [
+    {
+      "id": "1",
+      "creationTime": "2020-01-01T18:25:43",
+      "changeTime": "2020-01-02T18:25:43",
+      "status": "active",
+      "side": "buy",
+      "price": "8.559",
+      "amount": "500000",
+      "instrument": "CNH/RUB"
+    }
+  ],
+  "market": [
+    {
+      "id": "1",
+      "name": "CNH/RUB",
+      "priceBuy": "8.559",
+      "priceSell": "8.558"
+    },
+    {
+      "id": "2",
+      "name": "EUR/USD",
+      "priceBuy": "5.559",
+      "priceSell": "5.558"
+    },
+    {
+      "id": "3",
+      "name": "USD/RUB",
+      "priceBuy": "7.559",
+      "priceSell": "7.558"
+    },
+    {
+      "id": "4",
+      "name": "BYN/RUB",
+      "priceBuy": "6.559",
+      "priceSell": "6.558"
+    },
+    {
+      "id": "5",
+      "name": "TRY/RUB",
+      "priceBuy": "3.559",
+      "priceSell": "3.558"
+    }
+  ]
+}

@@ -2,10 +2,7 @@ import Heading from "./Heading";
 import styled from "styled-components";
 
 const StyledHeader = styled.header`
-  padding: 2rem 7rem 1rem;
   border-bottom: 1px solid var(--color-grey-100);
-  display: flex;
-  justify-content: space-between;
 `;
 
 const Button = styled.button`
@@ -34,11 +31,21 @@ const Button = styled.button`
   }
 `;
 
+const Container = styled.div`
+  max-width: 120rem;
+  padding: 2rem 7rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+`;
+
 function Header() {
   return (
     <StyledHeader>
-      <Heading as={"h1"}>📈 NT Stock</Heading>
-      <Button>Login</Button>
+      <Container>
+        <Heading as={"h1"}>📈 NT Stock</Heading>
+        <Button>Login</Button>
+      </Container>
     </StyledHeader>
   );
 }

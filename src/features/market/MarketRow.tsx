@@ -12,11 +12,22 @@ const TableRow = styled.div`
   }
 `;
 
-function MarketRow() {
+const BuyPrice = styled.span`
+  color: var(--color-green-700);
+`;
+
+const SellPrice = styled.span`
+  color: var(--color-red-700);
+`;
+
+function MarketRow({ stock }) {
   return (
     <TableRow role="row">
-      <div>CNH/RUB</div>
-      <div>8.558 / 8.559</div>
+      <div>{stock.name}</div>
+      <div>
+        <SellPrice>{stock.priceSell}</SellPrice> /{" "}
+        <BuyPrice>{stock.priceBuy}</BuyPrice>
+      </div>
     </TableRow>
   );
 }

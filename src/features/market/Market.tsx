@@ -2,13 +2,15 @@ import styled from "styled-components";
 import Card from "../../ui/Card";
 import MarketTable from "./MarketTable";
 
-const StyledMarket = styled.div``;
+const StyledMarket = styled(Card)`
+  height: 25rem;
+`;
 
 function Market() {
   return (
-    <Card>
+    <StyledMarket>
       <MarketTable />
-    </Card>
+    </StyledMarket>
   );
 }
 

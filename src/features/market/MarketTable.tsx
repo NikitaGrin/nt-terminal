@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import MarketRow from "./MarketRow";
+import { useQuery } from "@tanstack/react-query";
+import { getMarket } from "../../services/apiMarket";
 
 const Table = styled.div`
   border: 1px solid var(--color-grey-200);
@@ -7,7 +9,7 @@ const Table = styled.div`
   font-size: 1.4rem;
   background-color: var(--color-grey-0);
   border-radius: 7px;
-  overflow: hidden;
+  overflow-y: scroll;
   width: 100%;
 `;
 
@@ -27,13 +29,20 @@ const TableHeader = styled.header`
 `;
 
 function MarketTable() {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ["market"],
+    queryFn: getMarket,
+  });
+
   return (
     <Table role="table">
       <TableHeader role="row">
         <div>Название</div>
         <div>Цена</div>
       </TableHeader>
-      <MarketRow />
+
+      {!isLoading &&
+        data.map((stock) => <MarketRow stock={stock} key={stock.id} />)}
     </Table>
   );
 }

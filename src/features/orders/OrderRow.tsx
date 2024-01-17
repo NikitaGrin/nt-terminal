@@ -14,17 +14,17 @@ const TableRow = styled.div`
   }
 `;
 
-function OrderRow() {
+function OrderRow({ order }) {
   return (
     <TableRow role="row">
-      <div>1</div>
-      <div>2022-01-01 12:00:00</div>
-      <div>2022-01-01 12:00:00</div>
-      <div>Active</div>
-      <div>Buy</div>
-      <div>8.559</div>
-      <div>500 000.00</div>
-      <div>CNH/RUB</div>
+      <div>{order.id}</div>
+      <div>{order.creationTime}</div>
+      <div>{order.changeTime}</div>
+      <div>{order.status}</div>
+      <div>{order.side}</div>
+      <div>{order.price}</div>
+      <div>{order.amount}</div>
+      <div>{order.instrument}</div>
     </TableRow>
   );
 }
