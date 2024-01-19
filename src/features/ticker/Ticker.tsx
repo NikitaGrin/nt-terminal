@@ -2,13 +2,21 @@ import styled from "styled-components";
 import Card from "../../ui/Card";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { getMarket } from "../../services/apiMarket";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { createOrder } from "../../services/apiOrders";
+import toast from "react-hot-toast";
 
 const StyledTicker = styled(Card)`
   padding: 3rem;
   align-items: center;
   height: 26rem;
+`;
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const AssetSelector = styled.select`
@@ -63,53 +71,74 @@ const BuyButton = styled.button`
 `;
 
 function Ticker() {
+  const queryClient = useQueryClient();
+  const [selectedStock, setSelectedStock] = useState({});
+  const [action, setAction] = useState("sell");
+
   const { data, isLoading, error } = useQuery({
     queryKey: ["market"],
     queryFn: getMarket,
   });
 
-  const queryClient = useQueryClient();
-
-  const { isLoading: isCreating, mutate } = useMutation({
+  const { isPending: isCreating, mutate } = useMutation({
     mutationFn: createOrder,
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ["orders"] });
     },
   });
-  const [selectedStock, setSelectedStock] = useState(data?.at(0));
 
-  function createOrderHandler(type) {
-    console.log(type);
-    mutate([selectedStock, type]);
+  function createOrderHandler(e: FormEvent) {
+    e.preventDefault();
+    const formData = new FormData(e.currentTarget);
+    const data = Object.fromEntries(formData);
+    if (data.amount < 1) {
+      toast.error("Amount can't be less than 0!");
+      return;
+    }
+    mutate([
+      { ...selectedStock, priceBuy: data.priceBuy, amount: data.amount },
+      action,
+    ]);
   }
+
+  useEffect(
+    function () {
+      setSelectedStock(data?.at(0));
+    },
+    [data]
+  );
 
   return (
     <StyledTicker>
-      <AssetSelector
-        name="asset"
-        onChange={(e) => setSelectedStock(data[+e.target.value - 1])}
-      >
-        {!isLoading &&
-          data.map((stock) => (
-            <option key={stock.id} value={stock.id}>
-              {stock.name}
-            </option>
-          ))}
-      </AssetSelector>
-      <Input type="number" defaultValue={selectedStock?.priceBuy} />
-      <Actions>
-        <Action>
-          <Price>8.558</Price>
-          <SellButton onClick={() => createOrderHandler("sell")}>
-            sell
-          </SellButton>
-        </Action>
-        <hr />
-        <Action>
-          <Price>8.559</Price>
-          <BuyButton onClick={() => createOrderHandler("buy")}>buy</BuyButton>
-        </Action>
-      </Actions>
+      <Form onSubmit={createOrderHandler}>
+        <AssetSelector
+          onChange={(e) => setSelectedStock(data[+e.target.value - 1])}
+        >
+          {!isLoading &&
+            data.map((stock) => (
+              <option key={stock.id} value={stock.id}>
+                {stock.name}
+              </option>
+            ))}
+        </AssetSelector>
+        <Input
+          type="number"
+          defaultValue={selectedStock?.priceBuy}
+          name="priceBuy"
+        />
+        <Input type="number" defaultValue={1} name="amount" />
+        <Actions>
+          <Action>
+            <Price>{selectedStock?.priceSell}</Price>
+            <SellButton onClick={() => setAction("sell")}>sell</SellButton>
+          </Action>
+          <hr />
+          <Action>
+            <Price>{selectedStock?.priceBuy}</Price>
+            <BuyButton onClick={() => setAction("buy")}>buy</BuyButton>
+          </Action>
+        </Actions>
+      </Form>
     </StyledTicker>
   );
 }

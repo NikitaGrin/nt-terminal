@@ -7,7 +7,6 @@ const StyledOrders = styled(Card)`
   padding: 3rem;
   grid-column: 2;
   grid-row: 1 /3;
-  overflow-y: scroll;
   height: 55rem;
 `;
 

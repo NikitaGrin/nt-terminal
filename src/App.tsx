@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import GlobalStyles from "./styles/GlobalStyles";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ function App() {
         <ReactQueryDevtools />
         <GlobalStyles />
         <RouterProvider router={router} />
+        <Toaster />
       </QueryClientProvider>
     </>
   );

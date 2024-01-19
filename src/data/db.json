@@ -9,6 +9,186 @@
       "price": "8.559",
       "amount": "500000",
       "instrument": "CNH/RUB"
+    },
+    {
+      "id": "1705680832258",
+      "creationTime": "2024-01-19T16:13:52.258Z",
+      "changeTime": "2024-01-19T16:13:52.258Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": "1705680833626",
+      "creationTime": "2024-01-19T16:13:53.626Z",
+      "changeTime": "2024-01-19T16:13:53.626Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": "1705680858166",
+      "creationTime": "2024-01-19T16:14:18.166Z",
+      "changeTime": "2024-01-19T16:14:18.166Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": "1705680859189",
+      "creationTime": "2024-01-19T16:14:19.189Z",
+      "changeTime": "2024-01-19T16:14:19.189Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": "1705680859872",
+      "creationTime": "2024-01-19T16:14:19.872Z",
+      "changeTime": "2024-01-19T16:14:19.872Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": "1705680863689",
+      "creationTime": "2024-01-19T16:14:23.689Z",
+      "changeTime": "2024-01-19T16:14:23.689Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682068236,
+      "creationTime": "2024-01-19T16:34:28.236Z",
+      "changeTime": "2024-01-19T16:34:28.236Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682172680,
+      "creationTime": "2024-01-19T16:36:12.680Z",
+      "changeTime": "2024-01-19T16:36:12.680Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682215906,
+      "creationTime": "2024-01-19T16:36:55.906Z",
+      "changeTime": "2024-01-19T16:36:55.906Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682217161,
+      "creationTime": "2024-01-19T16:36:57.161Z",
+      "changeTime": "2024-01-19T16:36:57.161Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682339480,
+      "creationTime": "2024-01-19T16:38:59.480Z",
+      "changeTime": "2024-01-19T16:38:59.480Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682358806,
+      "creationTime": "2024-01-19T16:39:18.806Z",
+      "changeTime": "2024-01-19T16:39:18.806Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682366721,
+      "creationTime": "2024-01-19T16:39:26.721Z",
+      "changeTime": "2024-01-19T16:39:26.721Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682368529,
+      "creationTime": "2024-01-19T16:39:28.529Z",
+      "changeTime": "2024-01-19T16:39:28.529Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682393204,
+      "creationTime": "2024-01-19T16:39:53.204Z",
+      "changeTime": "2024-01-19T16:39:53.204Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682566417,
+      "creationTime": "2024-01-19T16:42:46.417Z",
+      "changeTime": "2024-01-19T16:42:46.417Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "2",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682571721,
+      "creationTime": "2024-01-19T16:42:51.721Z",
+      "changeTime": "2024-01-19T16:42:51.721Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "15",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682575258,
+      "creationTime": "2024-01-19T16:42:55.258Z",
+      "changeTime": "2024-01-19T16:42:55.258Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "6",
+      "instrument": "CNH/RUB"
+    },
+    {
+      "id": 1705682755797,
+      "creationTime": "2024-01-19T16:45:55.797Z",
+      "changeTime": "2024-01-19T16:45:55.797Z",
+      "status": "active",
+      "side": "buy",
+      "amount": "1",
+      "instrument": "USD/RUB"
+    },
+    {
+      "id": 1705682765227,
+      "creationTime": "2024-01-19T16:46:05.227Z",
+      "changeTime": "2024-01-19T16:46:05.227Z",
+      "status": "active",
+      "side": "sell",
+      "amount": "1",
+      "instrument": "TRY/RUB"
     }
   ],
   "market": [

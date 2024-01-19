@@ -15,7 +15,7 @@ export async function createOrder([stock, type]) {
     status: "active",
     side: type,
     price: stock.price,
-    amount: "500000",
+    amount: stock.amount,
     instrument: stock.name,
   };
 
